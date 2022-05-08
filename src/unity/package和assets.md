@@ -1,3 +1,6 @@
+# unitypackage
+unitypackage可以用于打包一些资源、脚本等。unitypackage导入之后就会导入到assets里面，如果assets有依赖的话，也会相应的导入依赖。在导出unitypackage的时候，可以取消勾选"include dependencies"
+
 # unity导出资源的正确方法
 unity的文件分为两类：Assets和Packages
 Pacakges大多数情况下只是维护一个包的引用，但是也可以直接把包拷贝到Pacakges目录下面，这样分享给别人的时候就不会出现找不到包的问题了。
@@ -19,3 +22,8 @@ SteamingsAssets
 Resources与SteamingsAssets的区别
 Resources下 文件在打时会进行压缩与加密，但是StremingsAssets下的文件是直接被打包出来。所以SteamingsAssets中主要存放2进制文件
 Resources中的材质球、预制体等资源，会在打包时自动寻找引用资源，打包到Resurce中。
+
+# package原理
+unity的package是在电脑上共用的，项目A和项目B依赖同一个package，则这个package在磁盘上位于同一个位置，在项目A里面更改package的内容会影响到项目B。  
+把包直接放在Packages目录下面，则能够解决package位置问题。  
+从外部引入的packages是soft link，而不是复制一份。 

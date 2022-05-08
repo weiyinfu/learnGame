@@ -34,6 +34,6 @@
 
 
 # unity和unreal和cocos2d
-unity 15岁，脚本支持csharp、js
-unreal 26岁，脚本仅支持cpp
-cocos2d 12岁，国产
+unity 15岁，脚本支持csharp、js  
+unreal 26岁，脚本仅支持cpp  
+cocos2d 12岁，国产  
