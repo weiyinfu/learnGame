@@ -27,3 +27,27 @@ Resources中的材质球、预制体等资源，会在打包时自动寻找引�
 unity的package是在电脑上共用的，项目A和项目B依赖同一个package，则这个package在磁盘上位于同一个位置，在项目A里面更改package的内容会影响到项目B。  
 把包直接放在Packages目录下面，则能够解决package位置问题。  
 从外部引入的packages是soft link，而不是复制一份。 
+
+# 使用Resource加载一个asset文件
+Resources目录下面有一个PlatformSetting.asset文件
+`var x=UnityEngine.Resources.Load<PXR_PlatformSetting>("PlatformSetting");`
+在PlatformSetting.asset文件中有m_Script这一行，其中guid表示PXR_PlatformSetting.cs.meta中的guid，这个字段表示了这个meta文件所对应的类。  
+```
+MonoBehaviour:
+    m_ObjectHideFlags: 0
+    m_CorrespondingSourceObject: {fileID: 0}
+    m_PrefabInstance: {fileID: 0}
+    m_PrefabAsset: {fileID: 0}
+    m_GameObject: {fileID: 0}
+    m_Enabled: 1
+    m_EditorHideFlags: 0
+    m_Script: {fileID: 11500000, guid: 4a400eaa24c042bdb05671fd4bf94c1d, type: 3}
+```
+
+# Unity中与资源有关的几个ID
+Unity会为Assets目录中的每一个资源都创建一个meta文件，该文件中就有GUID，GUID表示这个资源的ID。GUID可以用于表示资源之间的引用关系。  
+* GUID：对象ID
+* fileID：文件ID，又叫本地ID，用于表示资源内部的资源。
+* InstanceID：实例ID。在Unity运行时会维护一个缓存表，用于将GUID和fileID映射成一个InstanceID。便于运行时管理资源。  
+
+资源之间的依赖关系使用GUID来确定；资源内部的依赖关系使用fileID来确定。  
