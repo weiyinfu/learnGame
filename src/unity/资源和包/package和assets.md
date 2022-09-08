@@ -51,3 +51,13 @@ Unity会为Assets目录中的每一个资源都创建一个meta文件，该文�
 * InstanceID：实例ID。在Unity运行时会维护一个缓存表，用于将GUID和fileID映射成一个InstanceID。便于运行时管理资源。  
 
 资源之间的依赖关系使用GUID来确定；资源内部的依赖关系使用fileID来确定。  
+
+# Standard Assets和StreamingAssets
+Standard Assets
+该文件夹下的文件会优先被编译，以便项目调用，它与Plugins一样，打包时会被编译到同一个.sln文件里。
+StreamingAssets
+该目录下的文件会在打包时打包到项目中去，与Resources一样不管有没有用到的文件，在打包时都会被打包出来。
+
+# Resources与SteamingsAssets的区别
+Resources下 文件在打时会进行压缩与加密，但是StreamingAssets下的文件是直接被打包出来。所以SteamingsAssets中主要存放2进制文件
+Resources中的材质球、预制体等资源，会在打包时自动寻找引用资源，打包到Resource中。  
