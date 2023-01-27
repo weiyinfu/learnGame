@@ -67,3 +67,9 @@ dependencies {
 其实就是把安卓工程中的gradle配置写入到maintemplate.gradle文件中，gradle的修改需要根据项目需求进行修改。
 第一种编译方式 以Unity为主，把安卓工程编译成一个jar包，放入到Plugins/Android中，然后通过Unity引擎编译成Apk，File-buildsetting-build
 第二种编译方式，以Android为主，勾选BuildSetting 中的ExportProject，然后export，把Unity工程导出，这个操作会把所有的dll 库编译成cpp的代码，把资源编译成android的assets然后再放到android工程进行编译
+
+# UI Orientation
+一共有五种取值。  
+* Portrait：纵向，包括Portrait和Portrait Upside down
+* Landscape：横向，分为Landscape Left和Landscape Right
+* Audo Rotation：自动旋转

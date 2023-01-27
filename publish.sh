@@ -1,0 +1,1 @@
+scp -r ./book dev:/home/weiyinfu.weiyinfu/mypy3/PicoPages/learnGame/
