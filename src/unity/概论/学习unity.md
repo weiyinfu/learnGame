@@ -4,6 +4,7 @@ unity是一个游戏框架，它的功能非常丰富，相比其它框架的优
 游戏首先就有物体，有了物体，可以给物体挂载一堆脚本。物体可以挂载属性，物体是游戏中的核心东西。
 # 学习资料
 * 官方文档：<https://docs.unity3d.com/cn/2020.3/Manual/GettingStartedAddingEditorComponents.html>
+* Unity官方文档脚本参考：<https://docs.unity3d.com/ScriptReference/AsyncOperation.html>
 * <https://www.w3cschool.cn/unity3d_jc/unity3d_jc-9dvl37yg.html>
 * c语言编程网：<http://c.biancheng.net/unity3d/80/>
 * 本地文档：file:///家目录/myUnity/2020.3.24f1/Documentation/en/Manual/index.html

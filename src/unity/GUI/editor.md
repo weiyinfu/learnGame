@@ -83,3 +83,10 @@ Inspector中会自动显示所有的public属性，要想隐藏某个属性，�
 [HideInInspector]
 在inspector中隐藏属性。
 ```
+
+# editor里面每帧刷新
+```plain
+
+            EditorApplication.update += () => { Debug.LogError("updating"); };
+
+```

@@ -9,6 +9,11 @@ Unity的这两种输入系统是互斥的，要想更改只能重启。Unity的X
 # 如何避免InputSystem频繁弹窗？
 新版的输入系统InputSystem需要通过PackageManager安装，只有在安装了InputSystem的情况下才会弹窗，要想避免弹窗，直接在Pacakge/manifest里面把InputSystem删掉即可。   
 
+# 如何切换到InputSystem？
+1. 打开PacakgeManager添加InputSystem包，一旦导入这个包，之后每次打开Unity如果没有启用新输入系统都会提示是否启用新的输入系统。
+2. 在PlayerSettings里面设置输入为新的InputSystem
+3. 把各个场景中的EventySystem按照提示启用新输入系统的MonoBehavior。  
+4. 对于类似InGameDebugConsole等一些库，需要手动添加引用，解决编译报错。
 
 # 输入涉及到的API
 * Input的静态方法系列
