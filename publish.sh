@@ -1,1 +1,3 @@
-scp -r ./book dev:/home/weiyinfu.weiyinfu/mypy3/PicoPages/learnGame/
+mdbookx build
+rsync -r ./book/* dev:~/mypy3/MyStatic/Books/learnGame/
+rsync -r book/* me:~/app/MyStatic/learnGame/
