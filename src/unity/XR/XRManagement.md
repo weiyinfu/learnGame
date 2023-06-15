@@ -1,13 +1,16 @@
 # XR 配置插件
+
 如果直接使用AssignedSettings可能没有东西，需要使用特定平台的
+
 ```
 var m=XRGeneralSettings.Instance.Manager;
 m.TrySetLoaders(new List<XRLoader>());
 var se=XRGeneralSettings.Instance.AssignedSettings;
 ```
-正确的设置XR的方法：
-```plain
 
+正确的设置XR的方法：
+
+```plain
         static XRManagerSettings GetXrSettings()
         {
             XRGeneralSettings generalSettings = XRGeneralSettingsPerBuildTarget.XRGeneralSettingsForBuildTarget(BuildTargetGroup.Android);
@@ -62,6 +65,5 @@ var se=XRGeneralSettings.Instance.AssignedSettings;
             }
         }
 ```
-
 
 XR Plugin Management文档：<https://docs.unity3d.com/Packages/com.unity.xr.management@4.0/manual/EndUser.html>
